@@ -1,0 +1,39 @@
+<div id="message">NA</div>
+<script>
+    const sum=function(a,b){
+        return a+b;
+    }
+</script>
+
+<script>
+    
+    // // window.alert("hello";
+
+    // //Runtime error
+    // // window.show();
+    // console.log(0/2);
+    // //
+    // // console.log(2/0)
+
+    // var arr1=[3,4,5,6,7]
+    // //runtime error
+    // console.log(arr1[-2]);
+    // console.log(arr1[7]);
+
+    // //Program to add two numbers
+    // var n1=9,n2=9;n3=null;
+    // n3=n1*n2;
+    // console.log(n3);
+    try{
+        var result=Sum(20,20);//Sum is not defined yet
+        document.getElementById("message").innerHTML=result;
+    }
+    catch(ex){
+        document.getElementById("message").innerHTML=ex;
+    }
+    // finally block is used for database deconnection,ending cookies sessions,deallocating memories,etc
+    finally{
+        console.log("hello")
+        document.getElementById("message2").innerHTML="finally block executed"
+    }
+</script>

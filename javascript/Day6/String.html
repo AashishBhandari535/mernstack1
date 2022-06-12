@@ -1,0 +1,28 @@
+<script>
+    //Creating string
+    const str1="Broadway";
+    const str2="Infosys";
+    const str3=`Nepal`;
+    const str4=new String("Broadway Infosys Nepal");
+
+    console.log(str4);
+    console.log(str4.length);
+
+    //Methods
+    //String.at(index)
+    console.log(str4.at(2));//o
+
+    //String.charAt(index)
+    console.log(str4.charAt(2));//o
+
+    //String.charCodeAt(index)
+    console.log(str4.charCodeAt(3))//ask key value//range:255
+    //String.codePointAt(pos)
+    console.log(str4.codePointAt(4))//return Unicode//range:more than ask key
+
+    //String.concat(str1)
+    //concat(str1,str2)
+    //concat(str1,str2,...,strn)
+    str4.concat(str4);
+    console.log(str4);
+</script>

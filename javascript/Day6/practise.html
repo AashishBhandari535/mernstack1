@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <p>First No: <input type="text" class="firstNum"></p>
+    <p>Second No: <input type="text" class="secondNum"> </p>
+    <!-- <p>Result: <input type="text" class="result"> </p> -->
+    <p class="result">Result:</p>
+    <p><input type="button" value="ADD" onclick="calc1()"></p>
+    <script src="Calculator.js"></script>
+    <script src="calc.js"></script>
+    <script>
+        const input1=document.querySelector(".firstNum");
+        const input2=document.querySelector(".secondNum");
+        const result=document.querySelector(".result");
+        var calc1=function(){
+            //alert("Hello");
+            //create and initialize an object of Calculator
+            //create and initialize an object of calc by an object of Calculator
+            //call sum method of calc object
+            //get an object of calculator from object of an calc class
+            //publish thirdNo from object of calculator class.
+            c1=new Calculator(Number(input1.value),Number(input2.value));
+            c2=new calc(c1);
+            c2.sum();
+            result.textContent=`Result:${c1.getThirdNum()}`
+        }
+    </script>
+</body>
+</html>

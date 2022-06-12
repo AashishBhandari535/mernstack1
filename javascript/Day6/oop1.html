@@ -1,0 +1,78 @@
+<script>
+//define-js
+    const Person=function(pid=-1,name="NA",address="NA"){//polymorphism
+        this.pid=0;//instance 
+        this.name=name;//instance
+        this.address=address;//instance
+    };
+    var Calculator=function(num1=0,num2=0){
+       this.num1=num1;
+       this.num2=num2;
+       this.num3=0;
+       this.opr=null;
+        this.calculate=function(opr = "+"){
+            if(opr=='+')
+              {
+                this.num3=this.num1+this.num2;
+                console.log(this.num3)
+              }
+            else if(opr=='-')
+               {
+                this.num3=this.num1-this.num2   
+                console.log(this.num3)
+               }
+            else if(opr=='*')
+               {
+                this.num3=this.num1*this.num2
+                console.log(this.num3)
+               }
+            else if(opr=='-')
+                {
+                    this.num3=this.num1-this.num2
+                    console.log(this.num3)
+                }
+            else if(opr=='sqrt')
+                {
+                    this.num3=Math.sqrt(this.num1);
+                    console.log(this.num3)
+                }
+            else
+               {
+                this.num3="NA"  
+                console.log(this.num3)    
+               }         
+       } 
+       this.toString=function(){
+          str1="<h2>Num1:"+this.num1+"</h2>";
+          str1=str1+"<h2>Num1:"+this.num2+"</h2>";
+          str1=str1+"<h2>Num1:"+this.num3+"</h2>";
+          str1=str1+"<h2>Num1:"+this.opr+"</h2>"
+          return(str1)
+       }
+    }
+</script>
+<script>
+//use-html
+    const p1=new Person("Aashish","ktm");//new keyword allocated memory
+    document.write(p1.pid);
+    console.log(p1)
+    var p2=new Person();
+    console.log(p2)
+     console.log(typeof p2)
+
+    p3=new Person(1);
+    console.log(p3) 
+
+    var p4=new Calculator(10,4);
+    p4.calculate('*') 
+    console.log(p4.toString())
+    document.write("hello",p4.toString())
+    console.log(p4 instanceof Calculator)
+    console.log(p2 instanceof Person)
+
+    var p5=Object.create(Calculator)
+    console.log(p5 instanceof Calculator)
+    p5.num1=1;
+    p5.num2=2;
+    console.log(p5)
+</script>

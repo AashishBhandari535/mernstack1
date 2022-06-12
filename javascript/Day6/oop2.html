@@ -1,0 +1,34 @@
+<script>
+    // class Person{
+    //     pid=0;//instance variable 
+    //     name="NA"
+    // }
+    // //Object
+    // p1=new Person();
+    // p1.pid=1;//automatic default constructor at runtime
+    // console.log(typeof p1);
+    // console.log(p1 instanceof Person)
+    // console.log(p1.pid)
+    // console.log(p1)
+    // console.log(p1.name)
+    // console.log(p1)
+    class Person{
+       //Instance variables
+       pid=null;
+       name=null;
+       //Constructor 
+       constructor(pid=0,name="NULL"){
+           this.pid=pid;
+           this.name=name;
+       }
+    }
+     p1=new Person();
+    console.log(p1);
+    p1=new Person(1);
+    console.log(p1);
+    p1=new Person(2,"Broadway");
+    p1.name="Raj";
+    console.log(p1);
+</script>
+
+<!-- setter getter -->

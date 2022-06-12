@@ -1,0 +1,11 @@
+<script src="sample2.js"></script>
+
+<script>
+    c1=new calculator(3,4);
+    console.log(c1);
+    // process(c1);
+    var cString = JSON.stringify(c1)
+    var result = process2(cString);
+    c3=JSON.parse(result);
+    console.log(c3)
+</script>

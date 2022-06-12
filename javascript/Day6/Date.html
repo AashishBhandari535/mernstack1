@@ -1,0 +1,35 @@
+<script>
+    var dt=new Date()
+    console.log(dt)//Output:Mon Jun 06 2022 18:28:01 GMT+0545 (Nepal Time)
+    console.log(typeof dt)
+
+    //Date.parse()
+    var str1=String("Mon Jun 06 2022 18:28:01 GMT+0545");
+    console.log(str1)
+    var dt2=Date.parse(str1);
+    console.log()
+    console.log(dt2)//Output:1654519381000(unix time stamp)
+    //timestamp to date in javascript
+    var a = new Date(dt2)
+    console.log(a);
+    //String to Date
+    var dt2=Date.parse("2022-05-31");//YYYY-MM-DD
+    var dt3=Date.parse("2022/05/31");//YYYY/MM/DD
+    //var dt2=Date.parse("31-05-2022")//Invalid Date
+    //var dt2=Date.parse("31 05 2022")//Invalid Date
+    console.log(dt2);
+    console.log(dt3);
+
+    //Date Difference
+    var date1=new Date("04/30/2019");
+    var date2=new Date("05/30/2019");
+    var diff_time=date2.getTime()-date1.getTime();//Output:miliseconds
+    var diff_days=diff_time/(1000*3600*24);//
+    console.log(`Difference Days:${diff_days}`);
+    //Start at 6:02 PM
+    var date1=new Date("Mon Jun 06 2022 06:02:00 GMT+0545");
+    var date2=new Date();
+    var diff_time=date2.getTime()-date1.getTime();//Output:miliseconds
+    var diff_days=diff_time/(1000*3600*24);//
+    console.log(`Difference Days:${diff_days}`);
+</script>

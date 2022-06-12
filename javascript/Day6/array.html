@@ -1,0 +1,244 @@
+<script>
+    //Array()
+    // var arr1=new Array();
+    // var arr1=new Array(4,3,2,6);
+    // var arr3=[6,7,8,9,9];
+    // console.log(arr1);
+    // console.log(typeof arr1);
+    // console.log(arr1.length);
+
+    // //Methods
+    // //Array.isArray(){static method}
+    // //Array.isArray(value)->boolean 
+    // console.log(Array.isArray(arr1));
+    // console.log(Array.isArray(1234));
+    // console.log(Array.isArray("Kathmandu"));
+    // console.log(arr1 instanceof Array);
+
+    // //Array.at()
+    // //at(index)-> Character value
+    // try{
+    //     console.log(arr1.at(3));//+ve indexing
+    //     console.log(arr1.at(-4));//-ve indexing
+    //     console.log(arr1.at(20));//undefined
+    //     if(arr1.length>20){
+    //         console.log(arr1.at(20));
+    //     }
+    //     else
+    //         throw "Index out of bounds!";
+    // }
+    // catch(exception){
+    //     console.log("Error:"+exception);
+    // }
+    // //Array.concat()->returns Array
+    // // concat()
+    // // concat(value)
+    // // concat(value0,value1)
+    // // concat(value0,value1, ... ,valueN)
+    // var arr1=new Array(5,6,3);
+    // console.log(arr1);
+    // arr1=arr1.concat(7);
+    // console.log(arr1);
+    // arr1=arr1.concat(9,2);
+    // console.log(arr1);
+    // arr1=arr1.concat(3,4,5,6,7);
+    // console.log(arr1);
+
+    // //Array.copywithin()->Array
+    // //copywithin(target)
+    // //copywithin(target,start)
+    // //copyWithin(target,start,end)
+    // var arr1=new Array(5,6,7,4,3,7,8,9);
+    // //var arr2=arr1.copyWithin(3);
+    // var arr2=arr1.copyWithin(3,5);//
+    // console.log("hello",arr1);
+    // console.log("mello",arr2);
+
+    // //Array.prototype.push()->length
+    // //push(element0)
+    // //push(element0,element1)
+    // //push(element0,element1,/*...,*/ elementN)
+    // var arr1=new Array(5,6);
+    // console.log(arr1.push(7));
+    // console.log(arr1);
+    // console.log(arr1.push(5,3));
+    // console.log(arr1);
+    // console.log(arr1.push(7,8,8,9,8,9,89));
+    // console.log(arr1);
+
+    // //Array.prototype.pop()-> element
+    // //pop()
+    // console.log(arr1.pop());
+    
+//Task
+/*
+    Main Menu ----------------
+    1.Add Element
+    2.Remove Index
+    3.Search Element
+    4.Update Index
+    5.Delete Index
+    6.Display all 
+    0.Exit
+    ---------------------------
+    enter your choice: _1
+    ---------------
+    enter value: _5
+    Value added on array successfully
+*/
+//Traversing Array Elements
+
+var array_var3=new Array(3,5,6,7,8);
+//Example-4
+for(let i=0;i<array_var3.length;i++){
+   // console.log(array_var3[i]);
+}
+//Example-5
+for(let index in array_var3){//in returns index number
+    //console.log(array_var3[index]);
+}
+//Example-6
+for(let item of array_var3){//return value
+    //console.log(item);
+}
+//Example-7
+array_var3.forEach(function(element){
+    // console.log(element);
+})
+//Example-8
+//array_var3.forEach((number,index)=>console.log("Index:"+index+"Value:"+number));
+
+//Methods
+//Array.at()=>element
+    //at(index)->element
+    var array_var3=new Array(3,5,6,7,8);
+    //console.log(array_var3.at(3));
+    //console.log(array_var3[3]);
+//Array.concat()->array
+    //var array_var3=new Array(3,5,6,7,8);
+    //array_var3=array_var3.concat(4);
+    //console.log(array_var3);
+//Array.entries()
+    //entries();
+    var array_var3_1=array_var3.entries();
+    //console.log(array_var3_1);
+    //console.log(array_var3)  
+    //for(let item of array_var3_1)
+        //console.log(item)
+    var grade=(currentValue)=>currentValue>40;
+    var array1=[1,30,39,29,10,43];
+    //console.log(array1.every(grade));  
+
+//Array.fill()
+    //fill(value)
+    array1=array1.fill(2,2,5)
+    //console.log(array1);
+    //fill(value,start)
+//Array.filter()
+    var array1=[1,30,39,29,10,13,12,2,5,4];
+    //Arrow function
+        var array1=array1.filter(item=>item>6);
+        //console.log(array1) 
+//Array.find()
+    //console.log(array1.find(e=>e % 2==0))
+//Array.flat()
+    // var array1=[1,30,39,[13,2,5,4]]
+    // var array2=array1.flat();
+    // console.log(array2);
+
+//Array.forEach()->undefined
+    //Example:1
+    var array1=new Array(4,7,8,3,3,2,3,4,5);
+    // array1.forEach(element=>{
+    //     console.log(element);
+    // });
+    // array1.forEach((element,index)=>console.log(element,index));
+    // array1.forEach((element,index,array)=>console.log(element,index,array))
+
+//Array.from()->Array
+    //Example:
+        // var result1=Array.from("Broadway Infosys Nepal")//
+        // console.log(result1)
+
+        // var result1=Array.from([3,5,6,7,4,3]);
+        // console.log(typeof result1);
+        // console.log(result1);
+
+//Array.prototype.includes->boolean
+    // includes(searchElement)
+    // includes(searchElement,fromIndex)
+    var array1=new Array(3,5,6,7,4,3);
+    var result=array1.includes(3);
+    console.log(result);
+
+//Array.prototype.indexOf()->
+    // var array1=new Array(3,5,6,7,4,3)
+    // var searchElement=5;
+    // result=array1.indexOf(searchElement);
+    // console.log(array1);
+    // if(result==-1){
+    //     console.log("Not found")
+    // }
+    // else{
+    //     console.log("found at index"+result)
+    // }
+//Array.isArray()->boolean
+//Array.isArray(value)
+        // Example:
+        // Array.isArray([1,2,3]);//true
+        // Array.isArray({foo:123});//false
+        // Array.isArray('foobar');//false
+        // Array.isArray(undefined);//false
+        // Array.isArray(2,3,4,5,6,7);//false
+        // Array.isArray(['abc',true,false,9890890]);//false
+//Array.prototype.join()->String
+//join()
+//join(separator)
+
+    // var array1=new Array('abc',true,false,9890890);
+    // var result=array1.join();
+    // console.log(result);
+    // var result=array1.join(";");
+    // console.log(result);
+//Array.prototype.lastIndexOf->Number
+//lastIndexOf(searchElement)
+//lastIndexOf(searchElement,fromIndex)
+
+    // var array1=new Array(2,3,4,5,3,7);
+    // var result1=array1.indexOf(3);
+    // var result2=array1.lastIndexOf(3);
+    // console.log(result1);
+    // console.log(result2);
+
+//Array.of()->Array
+        // Array.of(element0);
+        // Array.of(element0,element1);
+        // Array.of(element0,element1,.....,elementN)
+    var array1=Array.of(2,3,4,5,6,7);
+    console.log(array1);
+//Array.prototype.pop()->removed element/undefined
+        var result=array1.pop();
+        console.log(result)
+//Array.prototype.push()->Numebr
+        // push(element0)
+        // push(element0,element1);
+        // push(element0,element1,.....,elementN);
+
+        // var array1=new Array();
+        // var result1=array1.push(1);
+        // var result=array1.push(5,6,7,8,9,06);
+        // delete array1[0];
+        // console.log("hello",array1);
+//Array.prototype.reduce()->reducer
+        //reduce((previous))
+        const array=[15,16,17,18,19];
+        // function reducer(previous,current,index,array){
+        //     const returns=previous+current;
+        //     return returns;
+        // }
+        // console.log(array.reduce(reducer));
+//Array.prototype.reverse()->Array
+        console.log(array.reverse());
+//Array.prototype.sort()->Array
+        console.log(array.sort())
+</script>

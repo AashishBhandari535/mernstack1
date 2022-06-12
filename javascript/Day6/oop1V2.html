@@ -1,0 +1,36 @@
+<script>
+    const calculatorV2=function(num1=0,num2=0){
+        this.num1=num1;
+        this.num2=num2;
+        this.num3=0;
+        Object.defineProperties(this,{
+            //Name of property
+                "firstNo":{
+                    get:function(){
+                        return this.num1;
+                    },
+                    set:function(value){
+                        this.num1=value;
+                    }
+                },
+                "secondNo":{
+                    get:function(){
+                        return this.num2;
+                    },
+                    set:function(value){
+                        this.num2=value;
+                    }
+                },
+                "thirdNo":{
+                    get:function(){
+                        return this.num3;
+                    }
+                }
+        });
+    }
+    console.log(calculatorV2)
+    const c1=new calculatorV2();//calling default constructor
+    c1.firstNo=5;
+    c1.secondNo=3;
+    console.log(c1.firstNo)
+</script>

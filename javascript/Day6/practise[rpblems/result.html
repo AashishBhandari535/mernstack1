@@ -1,0 +1,60 @@
+<script src="result.js"></script>
+<h2>Result Processing</h2>
+<p>SID: <input type="text" id="txtSid"></p>
+<p>SUB-1:<input type="text" id="txtSub1"></p>
+<p>SUB-2:<input type="text" id="txtSub2"></p>
+<p>SUB-3:<input type="text" id="txtSub3"></p>
+<p><input type="button" value="PROCESS" name="btnProcess" onclick="processStudent2()"></p>
+<p>TOTAL:<input type="text" id="txtTotal"></p>
+<p>AVERAGE: <input type="text" id="txtAvg"> </p>
+<p>result: <input type="text" id="txtResult"></p>
+<!-- <p><input type="button" value="SAVE" name="btnSave"></p>
+<p><input type="button" value="CLEAR" name="btnClear"></p> -->
+<table border="1" class="table1">
+    <tr><td>ID</td><td>SUB1</td><td>SUB2</td><td>SUB3</td><td>TOTAL</td><td>AVG</td><td>RESULT</td></tr>
+</table>
+<script>
+    function addrow(sid,sub1,sub2,sub3,a){
+        const html=`<tr><td>${sid}</td><td>${sub1}</td><td>${sub2}</td><td>${sub3}</td><td>${a.total}</td><td>${a.avg}</td><td>${a.result}</td></tr>`
+        document.querySelector(".table1").insertAdjacentHTML("beforeend",html);
+        console.log(sid,sub1,sub2,sub3,a)
+    }
+    // function processStudent1(){
+    //     var sid=sub1=sub2=sub3=null;
+    //     sid=txtSid.value;
+    //     sub1=Number(txtSub1.value);
+    //     sub2=Number(txtSub2.value);
+    //     sub3=Number(txtSub3.value);
+    //     var result=process1(sid,sub1,sub2,sub3);
+    //     txtTotal.value=result.total;
+    //     txtAvg.value=result.avg;
+    //     txtResult.value=result.result;
+    //     console.log(result)
+    //     addrow(sid,sub1,sub2,sub3,result);
+    //     //add row on table
+    // }
+    function processStudent2(){
+        //read all values
+        //create an object
+        //send object to process2 function
+        //receive result and display
+        //add row on table
+        sid=txtSid.value;
+        sub1=Number(txtSub1.value);
+        sub2=Number(txtSub2.value);
+        sub3=Number(txtSub3.value);
+        // console.log(sid,sub1,sub2,sub3)
+        const a={
+            sid:sid,
+            sub1:sub1,
+            sub2:sub2,
+            sub3:sub3
+        }
+        var result=process2(a);
+        txtTotal.value=result.total;
+        txtAvg.value=result.avg;
+        txtResult.value=result.result;
+        addrow(sid,sub1,sub2,sub3,result);
+    }
+    
+</script>

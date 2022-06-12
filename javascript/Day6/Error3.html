@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input1">
+    <input type="text" class="inpu2">
+    <button class="press">press</button>
+    <script>
+        const input1=document.querySelector(".input1");
+        const input2=document.querySelector(".input2");
+        const press=document.querySelector(".press")
+        try{
+            input1.addEventListener('mouseout',()=>{
+                if((Number(input1.value) < 1 || Number(input1.value ) > 10))
+                {
+                    throw "Put element between 1 and 10";
+                }
+            })
+            input2.addEventListener('mouseout',()=>{
+                if((Number(input1.value) <= 11 || Number(input1.value ) >= 20))
+                {
+                    throw "Put element between 11 and 20";
+                }
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+    </script>
+</body>
+</html>

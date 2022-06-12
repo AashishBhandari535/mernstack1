@@ -1,0 +1,32 @@
+<script src="result.js"></script>
+<script>
+    var id = 1; // process(sid); //its is copy of process(sid)
+    var name="Ram Bahadur";
+    var standard = "BIT";
+    var section = "A";
+    var sub1 = 79;
+    var sub2 = 98;
+    var sub3 = 89;
+    var sub4 = 99;
+    var total = sub1 + sub2 + sub3 + sub4;
+    const pm = 40;
+    var average = total / 4;
+    var grade;
+    var marksstatus;
+    var result = process(id, name, standard, section, sub1, sub2, sub3, sub4);
+    
+    // var result=result(id, name);
+    document.write("Id: "+ result.stud_id+"<br/>");
+    document.write("Standard: "+ result.stn+"<br/>");
+    document.write("Name: "+ result.stud_name+"<br/>");
+    document.write("Section: "+ result.stud_section+"<br/>");
+    document.write("Marks of subject 1 is: "+ result.stud_sub1+"<br/>");
+    document.write("Marks of subject 2 is: "+ result.stud_sub2+"<br/>");
+    document.write("Marks of subject 3 is: "+ result.stud_sub3+"<br/>");
+    document.write("Marks of subject 4 is: "+ result.stud_sub4+"<br/>");
+    document.write("Total Marks: "+ result.stud_total+"<br/><br/>");
+    document.write("Marks of average is: "+ result.stud_average+"<br/>");
+	document.write("Your are: "+ result.stud_result+"<br/>");
+    document.write("My Grade is: "+ result.stud_grade+"<br/>");
+    
+</script>

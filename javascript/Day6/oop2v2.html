@@ -1,0 +1,80 @@
+<script>
+    //superclass
+    class Person{
+        //Instance variable
+        pid;
+        fullName;
+        //constructor
+        //we can make multiple constructors in javascript
+        constructor(pid="0",fullName="NA"){//polymorphism
+            this.pid=pid;
+            this.fullName=fullName;
+        }
+        // setters
+        set_pid(pid){
+            this.pid=pid;
+        }
+        set_fullName(fullName){
+            this.fullName=fullName;
+        }
+        // getters
+        get_pid(){
+            return this.pid;
+        }
+        get_fullName(){
+            return this.fullName;
+        }
+    }
+
+    //Inheritance
+    //subclass
+    //Relation between super class and sub class is one to one
+    class NewPerson extends Person{
+        //can access resources of Person class
+        address;
+        phone;
+        constructor(pid=0,fullName="NA",address="NA",phone="NA"){
+            super(pid,fullName);//constructor of parent class
+            this.address=address;
+            this.phone=phone;
+        }
+        set_address(address){
+            this.address=address
+        }
+        set_phone(phone){
+            this.phone=phone;
+        }
+        get_address(){
+            return this.address;
+        }
+        get_phone(){
+            return this.phone;
+        }
+        toString(){
+            return super.get_pid()+","+super.get_fullName()+","+this.address+","+this.phone;
+        }
+    }
+    var p1=new Person();
+    //By default calling constructor at run time
+    // p1.pid=1;
+    // p1.fullName="Rajesh Hamal"
+
+    console.log(p1);
+    // p1.set_pid(0);
+    // p1.set_fullName("Rajesh Hamal")
+    // p1.get_fullName();
+    // p1.get_pid();
+
+    //Method overloading or Polymorphism
+    p1=new Person(1);
+    console.log(p1)
+    p1=new Person(1,"Name");
+    console.log(p1)
+    p1=new Person(1,"Shyam","Address");
+    console.log(p1)
+
+    var p2=new NewPerson(3,"Aashish","Tinkune","9861531665")
+    // console.log(    p2.get_fullName())
+    // console.log(p2)
+    console.log(p2.toString())
+</script>
